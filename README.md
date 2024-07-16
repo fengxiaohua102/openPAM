@@ -44,7 +44,7 @@ The 3D output will be saved in a large tiff file on the root directory (if not s
 
 > **NOTE:**  If you want more control over the demo reconstruction, please follow the comments in the demo code, which is detailed and straightforward to understand.
 
-## Instructions for use of the code for your own data
+## Instructions for using the code on your own data
 
 You can use the code without modifications for image reconstruciton of your own experimental data. To make it work out of the box, please follows the steps listed below:
 
