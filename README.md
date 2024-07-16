@@ -1,4 +1,4 @@
-![logo](D:/DataTransfer/openPAM_logo.jpg)
+![logo](D:\DataTransfe\openPAM_logo.jpg)
 # OpenPAM: Optically encoded photoacoustic microscopy
 
 This repositoary contains the code and example dataset for "High resolution volumetric imaging with optically encoded photoacoustic microscopy", which we termed as **openPAM**. 
