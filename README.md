@@ -2,6 +2,7 @@
 # OpenPAM: Optically encoded photoacoustic microscopy
 
 This repositoary contains the code and example dataset for "High resolution volumetric imaging with optically encoded photoacoustic microscopy", which we termed as **openPAM**.
+
           ![logo](images/demo_video.gif)
           
 **Absract:**
