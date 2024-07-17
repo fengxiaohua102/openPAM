@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Apr 12 20:24:25 2023
-
-@author: fxh102
+Neural deoncovolution algorithm based on Plug-and-Play FISTA
 """
 import numpy as np
 import torch
@@ -208,7 +206,7 @@ def denoise_net(net, opt, noisy, sigma_hat):
                 
     img = img*max_val + min_val
     img = img.squeeze(2) if Flag_2D else img
-    img = proxl1(img, sigma_hat*4e-1)
+    img = proxl1(img, 3e-3)
     
     return img
 
