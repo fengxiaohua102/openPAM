@@ -42,11 +42,11 @@ We provide a basic demonstration script where one can mondify the dataset to be 
 To run the demo script, simply run the following command:
 > python demo_openPAM.py
 
-The 3D output will be saved in a large tiff file on the root directory (if not specified in the demo code), where the x-y integral projection image will be rendered by matplotlib. The demo will take about half hour for a modern GPU (such as GTX A6000). 
-> If you want to quickly test the code, you can do two simple modifications:
-> 1: Reduce the region of interest (See ROI comments in the demo code) to smaller volumes, which will enalbe GPUs with smaller VRAM (such as GTX 2080, 3090 or 4080) to be used
-> 2: Reduce the iteration number of the solver to 30 (a good tradeoff between reconstruction quality and time)
-> Additionally, if you can accept a degradation in reconstruction quality, you can replace the DRUNet with ffdnet. With these modifications, one can obtain the recontruciton within a few minitues.
+The 3D output will be saved in a large tiff file on the imaging session directory (if not specified in the demo code), where the x-y integral projection image will be rendered by Matplotlib. The demo will take about half hour for a modern GPU (such as GTX A6000). 
+> If you want to quickly test the code, you can do a few simple modifications:
+>  - Reduce the region of interest (See ROI comments in the demo code) to smaller volumes, which will enalbe GPUs with smaller VRAM (such as GTX 2080, 3090 or 4080) to be used.
+>  - Reduce the iteration number of the solver to 30 (a good tradeoff between reconstruction quality and time).
+>  - Additionally, if you can accept a degradation in reconstruction quality, you can replace the DRUNet with ffdnet. With these modifications, one can obtain the recontruciton within a few minitues.
 
 > **NOTE:**  If you want more control over the demo reconstruction, please follow the comments in the demo code, which is detailed and straightforward to understand.
 
@@ -70,7 +70,7 @@ from their official github respositories:
  3. Restormer: https://github.com/swz30/Restormer
 
 ## Citation
-If you find our code and method useful, and wish to know more details of openPAM, please refer to our manuscript and consider citing it. 
+If you find our code and method useful, and wish to know more details of openPAM, please refer to our manuscript and consider citing it.We will update it as soon as we can. Stay tuned!
 ```
 @article{openPAM,
   title={High resolution volumetric imaging with opticall encoded photoacoustic microscopy},
@@ -79,6 +79,6 @@ If you find our code and method useful, and wish to know more details of openPAM
   year={2024},
 }
 ```
-which will be updated soon. Stay tuned!
+
 
 
