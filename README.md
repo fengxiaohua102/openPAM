@@ -37,13 +37,21 @@ It is recomended to use Anaconda to install a working Python (>=3.19) distributi
 All these packages can be install with Anaconda by using the command 'conda install xx", with xx being the package name such as 'numpy'.
 
 ## Demo
-### Important Notice: due to the huge size of the experimental data, we uploaded the dataset (a subset of imaging sessions by limiting the field of view) in Google Drive . Please do the following two steps before running the demo code.
- - Download the dataset first and place it under the directory of /ExpData_DH
+**Important Notice: due to the huge size of the experimental data, we uploaded the dataset (a subset of imaging sessions by limiting the field of view) in Google Drive . Please do the following two steps before running the demo code**.
+ - Download the dataset first and place it under the directory of /ExpData_DH (Google Drive link: https://drive.google.com/file/d/1pOQJo4Pf4vDVw6xvzkEWjCgRIpWy70o_/view?usp=drive_link)
  - Unzip the psf_stack_z2um.7z
-
+ - Make sure the directory structure looks like the following:
+```bash
+       /ExpData_DH
+          /rawdata_eye
+          ht.tif
+          psf_stack_z2um.tif
+```
 We provide a basic demonstration script where one can mondify the dataset to be processed and see the final reconstruction results, and save the output volume into a large tiff image for 3D visualization in other software such as ParaView.
 To run the demo script, simply run the following command:
-> python demo_openPAM.py
+```
+python demo_openPAM.py
+```
 
 The 3D output will be saved in a large tiff file on the imaging session directory (if not specified in the demo code), where the x-y integral projection image will be rendered by Matplotlib. The demo will take about half hour for a modern GPU (such as GTX A6000). 
 > If you want to quickly test the code, you can do a few simple modifications:
