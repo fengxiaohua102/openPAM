@@ -267,7 +267,7 @@ if __name__ == '__main__':
              
         shift_opt_fine = shift_array[K_idx]
 
-    np.save(save_dir + '/shift_opt.npy', shift_opt_array)
+    np.save(imagingsession_dir + '/shift_opt.npy', shift_opt_array)
     stop_time = time.perf_counter()
     print('Total processing time is:', stop_time - st_time)
     
