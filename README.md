@@ -58,9 +58,16 @@ You can use the code without modifications for image reconstruciton of your own 
  
  After all these steps, you should be able to run the code and monitoring the recontruction process on a terminal, and obtain the results after some time (for references, recontructing a full 1000 X 1000 X 512 volume on a GTX A6000 will take about half hour).
 
-## Related Publication
-
-For more details of openPAM, please refered to our manuscript. 'High resolution volumetric imaging with opticall encoded photoacoustic microscopy', arxiv, which will be updated soon.
-Stay tuned!
+## Citation
+If you find our code and method useful, and wish to know more details of openPAM, please refer to our manuscript and consider citing it. 
+```
+@article{openPAM,
+  title={High resolution volumetric imaging with opticall encoded photoacoustic microscopy},
+  author={Jiayu Zhao, Zhitong Lai, Yuecheng Shen, Xiankun Qiu, Jiawei Luo,Fangzhou Jin, Yongkang Zhang, Yang Ran, Jun Ma, Bing Cong, Hengfeng Yan,Daixuan Wu, Zhengyang Wang, Jiaming Liang, Dalong Qi, Yunhua Yao1,Lianzhong Deng, Zhenrong Sun, Bai-Ou Guan, Xiaohua Feng, and Shian Zhang},
+  journal={arXiv preprint arXiv:xxx.xxx},
+  year={2024},
+}
+```
+which will be updated soon. Stay tuned!
 
 
