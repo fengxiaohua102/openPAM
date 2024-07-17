@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Apr 10 22:15:45 2023
-
-@author: Feng Xiaohua
-Implement the PAM_PSF operators using pytorch (since it is convolutional)
+Implement the openPAM operators using pytorch to take full advantage
+of GPU and deep neural denoising networks.
 """
 
 import torch
@@ -17,7 +15,7 @@ def openPAM_Forward_FFT(PAM_HD, psf_stack, psf_transducer):
 #  2 psf_stack: the normalized point spread function or simply the kernel of the depth dependent psf, similar as PAM_HD
 #  3 psf_transducer: the temporal kernel (envelop) of the transucer, a one-D torch.tensor: 1, Nt
 #   ******** The forward model of the image formation is:   *******
-#   PAM_3D = psf_transducer *t (PAM_3D(:,:,K) *xy psf_stack(:,:,K))
+#   PAM_3D = psf_transducer *t (PAM_HD(:,:,K) *xy psf_stack(:,:,K))
 #  where *t is conv in time while *xy is conv in space
 
     psf_cuda = psf_stack.float().cuda()            # H, W, Nz
@@ -58,7 +56,7 @@ def openPAM_Adjoint_FFT(PAM_3D, psf_stack, psf_transducer):
 #  2 psf_stack: the normalized point spread function or simply the kernel of the depth dependent psf similar as PAM_3D
 #  3 psf_transducer: the temporal kernel (envelop) of the transucer, a one-D torch.tensor: 1, Nt
 #   ******** The forward model of the image formation is:   *******
-#   PAM_3D = psf_transducer *t (PAM_3D(:,:,K) *xy psf_stack(:,:,K))
+#   PAM_3D = psf_transducer *t (PAM_HD(:,:,K) *xy psf_stack(:,:,K))
 #  where *t is conv in time while *xy is conv in space
 
     PAM_3D = PAM_3D.float().cuda()                 # H, W, Nz
