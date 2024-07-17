@@ -43,7 +43,10 @@ To run the demo script, simply run the following command:
 > python demo_openPAM.py
 
 The 3D output will be saved in a large tiff file on the root directory (if not specified in the demo code), where the x-y integral projection image will be rendered by matplotlib. The demo will take about half hour for a modern GPU (such as GTX A6000). 
-> If you want to quickly test the code, simply modifiy the region of interest (See ROI comments in the demo code) to smaller volumes, which will enalbe GPUs with smaller VRAM (such as GTX 2080, 3090 or 4080) to be used and reduce the recontruction time to less than ten minutes.
+> If you want to quickly test the code, you can do two simple modifications:
+> 1: Reduce the region of interest (See ROI comments in the demo code) to smaller volumes, which will enalbe GPUs with smaller VRAM (such as GTX 2080, 3090 or 4080) to be used
+> 2: Reduce the iteration number of the solver to 30 (a good tradeoff between reconstruction quality and time)
+> Additionally, if you can accept a degradation in reconstruction quality, you can replace the DRUNet with ffdnet. With these modifications, one can obtain the recontruciton within a few minitues.
 
 > **NOTE:**  If you want more control over the demo reconstruction, please follow the comments in the demo code, which is detailed and straightforward to understand.
 
@@ -57,6 +60,14 @@ You can use the code without modifications for image reconstruciton of your own 
  >4. Modify where the image results should be stored so that you can find it.
  
  After all these steps, you should be able to run the code and monitoring the recontruction process on a terminal, and obtain the results after some time (for references, recontructing a full 1000 X 1000 X 512 volume on a GTX A6000 will take about half hour).
+ 
+## Acknowledgement
+This work benefits from a number of awesome opensource works that provided the pretrained deep neural denoisers, in particular, the drunet (and ffdnet, restormers that had been tested as well).
+We chosen drunet for its state-of-art denoisnig performance and decent running speed for denoising large 3D volumes. We recommend to read the associated papers and download the pretrained networks
+from their official github respositories:
+ 1. DRUNet: https://github.com/cszn/DPIR/tree/master
+ 2. FFDNet: https://github.com/cszn/FFDNet
+ 3. Restormer: https://github.com/swz30/Restormer
 
 ## Citation
 If you find our code and method useful, and wish to know more details of openPAM, please refer to our manuscript and consider citing it. 
