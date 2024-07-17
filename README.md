@@ -2,8 +2,8 @@
 # OpenPAM: Optically encoded photoacoustic microscopy
 
 This repositoary contains the code and example dataset for "High resolution volumetric imaging with optically encoded photoacoustic microscopy", which we termed as **openPAM**.
-
-          ![logo](images/demo_video.gif)
+ 
+ ![logo](images/demo_video.gif)
           
 **Absract:**
 Photoacoustic microscopy (PAM) is a functional volumetric imaging technique that achieves optical diffraction-limited lateral resolution through confined optical
@@ -40,7 +40,7 @@ All these packages can be install with Anaconda by using the command 'conda inst
 
 We provide a basic demonstration script where one can mondify the dataset to be processed and see the final reconstruction results, and save the output volume into a large tiff image for 3D visualization in other software such as ParaView.
 To run the demo script, simply run the following command:
-> python demo_openpam.py
+> python demo_openPAM.py
 
 The 3D output will be saved in a large tiff file on the root directory (if not specified in the demo code), where the x-y integral projection image will be rendered by matplotlib. The demo will take about half hour for a modern GPU (such as GTX A6000). 
 > If you want to quickly test the code, simply modifiy the region of interest (See ROI comments in the demo code) to smaller volumes, which will enalbe GPUs with smaller VRAM (such as GTX 2080, 3090 or 4080) to be used and reduce the recontruction time to less than ten minutes.
@@ -52,7 +52,7 @@ The 3D output will be saved in a large tiff file on the root directory (if not s
 You can use the code without modifications for image reconstruciton of your own experimental data. To make it work out of the box, please follows the steps listed below:
 
  1. Format the 3D time-of-flight measurement data in the order of x-y-t (numpy or torch Tensor)
- >2. (Optionally) Correct any synchronization or sampling jitter to achieve best possible axial resolution
+ >2. (Optionally) Correct any synchronization or sampling jitter to achieve best possible axial resolution (please refer to the ProcPAM.py for more detailed implementation)
  3.  Process the data to be zero-mean and normlize it to the range of [-1, 1].
  >4. Modify where the image results should be stored so that you can find it.
  
