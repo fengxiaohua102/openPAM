@@ -37,7 +37,7 @@ It is recomended to use Anaconda to install a working Python (>=3.19) distributi
 All these packages can be install with Anaconda by using the command 'conda install xx", with xx being the package name such as 'numpy'.
 
 ## Demo
-### Important Notice: due to the huge size of the experimental data, we uploaded the dataset in a Cloud storage (a subset of a few imaging sessions by limiting the field of view). Please do the following two steps before running the demo code.
+### Important Notice: due to the huge size of the experimental data, we uploaded the dataset (a subset of imaging sessions by limiting the field of view) in Google Drive . Please do the following two steps before running the demo code.
  - Download the dataset first and place it under the directory of /ExpData_DH
  - Unzip the psf_stack_z2um.7z
 
