@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# ** This script performs jitter correction for PA raw signals using PD measurment signals**
+'''
+# ** This script performs jitter correction for PA raw signals using PD measurment signals (if any)**
 # ** and optimize the jitter further via unsupervised learning *****************************
 # **    1: The raw ADC reading is normalized to the range [-1, 1] by subtracting 2048 and dividing 2048 
 # **    2: Jitter correction (using PD if any)
 # **    3: Store the processed signal and hilbert_transformed signals/images
+'''
 
 import torch
 import numpy as np
@@ -128,7 +129,7 @@ def exp_lr_scheduler(optimizer, epoch, init_lr=0.001, lr_decay_epoch=200):
 
 def jitter_correct3D(PA_file, store_file, PD_file=None):
     # performs jitter correction for 3D PAM measurment data in the format of x-y-t
-    # Note that 2048 here is the zero-value for the 12-bit DAQ sampling value.
+    # Note that 2048 here is the zero for the 12-bit DAQ sampling value.
     bd_pix = 10   # boundary pixels for x-y-t data
     store_fname = store_file
     # process the raw DAQ data into the range of [-1, 1]
