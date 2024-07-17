@@ -2,7 +2,7 @@
 # OpenPAM: Optically encoded photoacoustic microscopy
 
 This repositoary contains the code and example dataset for "High resolution volumetric imaging with optically encoded photoacoustic microscopy", which we termed as **openPAM**. 
-
+![logo](images/demo_video.gif)
 **Absract:**
 Photoacoustic microscopy (PAM) is a functional volumetric imaging technique that achieves optical diffraction-limited lateral resolution through confined optical
 excitation and axial profiling via acoustic time-of-flight detection. However, the diffraction-limited lateral resolution is maintainable only within a depth of field of
@@ -13,7 +13,7 @@ openPAM, we performed in vivo volumetric imaging of animal vasculature and cance
 depth of 1.5 mm, significantly outperforming conventional PAM. The synergy of optical encoding and time-of-flight detection offers a new solution for optical
 sectioning and can broadly benefit fast and high-resolution volumetric microscopy.
 ![logo](images/demo_res.png)
-![logo](images/demo_video.gif)
+
 ## System requirements
 
 We implemented all of our algorithms using PyTorch 2.0, with CUDA-enabled GPU for acceleration. We tested the algorithms on both Ubuntu and Windows system using Anaconda. For image reconstruction of large volumes, it is recommended to use a modern GPU with a high VRAM (at least 12 GB and preferrably 48 GB so that the entire volume can be reconstructed without segmentation). Specific system requirements are:
