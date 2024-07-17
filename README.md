@@ -37,6 +37,9 @@ It is recomended to use Anaconda to install a working Python (>=3.19) distributi
 All these packages can be install with Anaconda by using the command 'conda install xx", with xx being the package name such as 'numpy'.
 
 ## Demo
+### Important Notice: due to the shear size of the experimental data, we uploaded the dataset in a Cloud storage. Please do the following two steps before running the demo code.
+ - Please download the dataset first and place it under the directory of /ExpData_DH
+ - Unzip the psf_stack_z2um.7z
 
 We provide a basic demonstration script where one can mondify the dataset to be processed and see the final reconstruction results, and save the output volume into a large tiff image for 3D visualization in other software such as ParaView.
 To run the demo script, simply run the following command:
