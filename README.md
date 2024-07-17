@@ -1,8 +1,9 @@
 ![logo](images/openPAM_logo.jpg)
 # OpenPAM: Optically encoded photoacoustic microscopy
 
-This repositoary contains the code and example dataset for "High resolution volumetric imaging with optically encoded photoacoustic microscopy", which we termed as **openPAM**. 
-![logo](images/demo_video.gif)
+This repositoary contains the code and example dataset for "High resolution volumetric imaging with optically encoded photoacoustic microscopy", which we termed as **openPAM**.
+          ![logo](images/demo_video.gif)
+          
 **Absract:**
 Photoacoustic microscopy (PAM) is a functional volumetric imaging technique that achieves optical diffraction-limited lateral resolution through confined optical
 excitation and axial profiling via acoustic time-of-flight detection. However, the diffraction-limited lateral resolution is maintainable only within a depth of field of
