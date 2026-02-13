@@ -103,7 +103,7 @@ def denorm_mean_scale(x_norm, mean_val, img_range):
 
 def Solver_Deblur_DRP_refine(A, At, b, opt):
 
-    print(' - Running DRP_Deblur_refine\n')
+    print(' - Running DRP_Deblur_refine')
     vis = opt['vis']
     POSCOND= opt['POScond']
 
